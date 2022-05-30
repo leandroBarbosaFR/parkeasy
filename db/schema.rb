@@ -10,10 +10,53 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_30_101631) do
+ActiveRecord::Schema.define(version: 2022_05_30_121150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "address_parkings", force: :cascade do |t|
+    t.string "address"
+    t.string "post_code"
+    t.string "city"
+    t.bigint "parking_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["parking_id"], name: "index_address_parkings_on_parking_id"
+  end
+
+  create_table "bookings", force: :cascade do |t|
+    t.date "start_at"
+    t.date "end_at"
+    t.bigint "parking_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["parking_id"], name: "index_bookings_on_parking_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "parkings", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.integer "price"
+    t.boolean "available", default: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_parkings_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "rating"
+    t.text "comment"
+    t.bigint "booking_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["booking_id"], name: "index_reviews_on_booking_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +66,17 @@ ActiveRecord::Schema.define(version: 2022_05_30_101631) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "mobile"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "address_parkings", "parkings"
+  add_foreign_key "bookings", "parkings"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "parkings", "users"
+  add_foreign_key "reviews", "bookings"
+  add_foreign_key "reviews", "users"
 end
