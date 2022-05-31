@@ -3,6 +3,7 @@ class Parking < ApplicationRecord
   has_one :address_parking
   has_many :reviews
   has_many :bookings
+  has_one_attached :photo
 
   validates :title, presence: true
   validates :description, presence: true
