@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <div class="row">
+    <h1>Tous les parkings</h1>
+    <div class="container-parkings">
+      <% @parkings.each do |parking| %>
+        <div class="col-12 col-lg-4">
+          <div class="card-parking">
+            <%= image_tag(parking.photo) %>
+            <div class="card-parking-infos">
+              <h2><%= parking.title %></h2>
+              <p><%= parking.price %> € par jour</p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

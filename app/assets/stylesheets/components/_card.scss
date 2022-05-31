@@ -1,0 +1,22 @@
+.card-parking {
+  height:auto;
+  margin: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card-parking img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-parking-infos {
+  padding: 8px;
+}
+.card-parking-infos h2 {
+  font-size: 24px;
+  font-weight: 600;
+}

@@ -26,19 +26,19 @@ img_parking_5 = URI.open("https://res.cloudinary.com/leandrobarbosalemos/image/u
 
 #seed parking
 parking_1 = Parking.create!(title: "Parking La Rotonde", description: "Place de parking très bien situé dans le centre ville d'aix en provence.", price: 8, available: "true", user: user_1)
-# parking_1.photo.attach(io: img_parking_1, filename: 'placeParking_box.jpg', content_type: 'image/jpg')
+parking_1.photo.attach(io: img_parking_1, filename: 'placeParking_box.jpg', content_type: 'image/jpg')
 
 parking_2 = Parking.create!(title: "Parking Rue d'Italie", description: "A louer une place de parking extérieure dans la résidence sécurisée l'italien.", price: 9, available: "true", user: user_2)
-# parking_2.photo.attach(io: img_parking_2, filename: 'placeParking_ext.jpg', content_type: 'image/jpg')
+parking_2.photo.attach(io: img_parking_2, filename: 'placeParking_ext.jpg', content_type: 'image/jpg')
 
 parking_3 = Parking.create!(title: "Parking Cours Sextius", description: "Location d'une place de parking avec chargeur pour voiture electrique.", price: 11, available: "true", user: user_3)
-# parking_3.photo.attach(io: img_parking_3, filename: 'placeParking_voitureElec.jpg', content_type: 'image/jpg')
+parking_3.photo.attach(io: img_parking_3, filename: 'placeParking_voitureElec.jpg', content_type: 'image/jpg')
 
 parking_4 = Parking.create!(title: "Parking Le Cezanne", description: "Location d'une place de parking souterrain avec possibilité de charger votre voiture electrique.", price: 12, available: "true", user: user_4)
-# parking_4.photo.attach(io: img_parking_4, filename: 'placeParking_chargeur.jpg', content_type: 'image/jpg')
+parking_4.photo.attach(io: img_parking_4, filename: 'placeParking_chargeur.jpg', content_type: 'image/jpg')
 
 parking_5 = Parking.create!(title: "Parking Du Roi René", description: "Place parking pour van.", price: 13, available: "true", user: user_5)
-# parking_5.photo.attach(io: img_parking_5, filename: 'placeParking_van.jpg', content_type: 'image/jpg')
+parking_5.photo.attach(io: img_parking_5, filename: 'placeParking_van.jpg', content_type: 'image/jpg')
 
 # #seed rating
 # parking_1.ratings << Review.create(rating: 5, review: "Emplacement ideal pour une journée de shopping.")
