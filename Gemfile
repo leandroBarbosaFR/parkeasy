@@ -33,6 +33,9 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'cloudinary', '~> 1.16.0'
 
+# Gemfile geocoder
+gem "geocoder"
+
 gem 'devise'
 
 gem 'autoprefixer-rails', '10.2.5'
