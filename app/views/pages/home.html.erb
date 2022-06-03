@@ -1,6 +1,35 @@
 <div class='banner-home'>
-  <h1>Location de parking entre particuliers</h1>
+  <div class="banner-home-content">
+    <h1>Location de parking entre particuliers</h1>
     <div class="button-container">
-      <%= link_to "Nos parkings disponibles!", "/parkings", class: "btn btn-primary align-text-bottom" %>
+      <%= link_to "Nos parkings disponibles!", parkings_path, class: "btn btn-primary align-text-bottom" %>
     </div>
+  </div>
 </div>
+<div class="container-maps-cities">
+  <div class="container-maps-cities-content">
+    <h2>Retrouvez nos parkings partout en France !</h2>
+    <div class="search-bar">
+    Renseigner une ville
+    </div>
+  </div>
+  <div class="maps-cities"
+    data-controller="mapbox-home"
+    data-mapbox-home-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</div>
+<!-- <div class="container-home-parkings">
+  <% @parkings.each do |parking| %>
+    <div class="home-card-parking">
+      <div class="home-card-parking-image">
+        <%= image_tag(parking.photo) %>
+      </div>
+      <div class="home-card-parking-infos">
+        <h3><%= parking.title %></h3>
+        <div class="short-line"></div>
+        <p><%= parking.description %></p>
+        <p><strong><%= parking.price %>€</strong>/jour</p>
+      </div>
+    </div>
+  <% end %>
+</div> -->

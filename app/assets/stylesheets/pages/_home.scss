@@ -1,1 +1,12 @@
 // Specific CSS for your home-page
+.search-bar {
+  width: 350px;
+  height: 50px;
+  border: 0.5px solid gray;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  color: lightgray;
+  font-weight: 200;
+}
