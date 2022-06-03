@@ -13,6 +13,8 @@
   border-radius: 4px;
   color: #ffffff;
   text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: 8px;
 }
 
 .mapboxgl-popup {
@@ -22,7 +24,7 @@
 
 .mapboxgl-popup-content {
   text-align: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: $all-fonts;
 }
 
 .mapboxgl-popup-content h2 {
