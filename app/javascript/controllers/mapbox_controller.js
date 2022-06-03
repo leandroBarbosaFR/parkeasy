@@ -21,7 +21,11 @@ export default class extends Controller {
 
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
-      const popup = new mapboxgl.Popup().setHTML(marker.info_window)
+      const popup = new mapboxgl.Popup()
+        .setHTML(marker.info_window)
+        .setMaxWidth("340px")
+        .addClassName('map-popup')
+
       const customMarker = document.createElement("div")
       customMarker.className = "marker"
       customMarker.insertAdjacentHTML("afterbegin", marker.info_marker)
