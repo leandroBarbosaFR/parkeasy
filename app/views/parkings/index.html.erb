@@ -8,6 +8,9 @@
           <div class="card-parking-infos">
             <h2><%= parking.title %></h2>
             <p><%= parking.price %> € par jour</p>
+             <div class="button-container">
+                    <%= link_to "Réserver!", "/parkings/#{parking.id}", class: "btn btn-primary align-text-bottom" %>
+                  </div>
           </div>
         </div>
       </div>
