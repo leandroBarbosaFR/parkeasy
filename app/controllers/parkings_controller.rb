@@ -11,4 +11,8 @@ class ParkingsController < ApplicationController
       }
     end
   end
+
+  def show
+    @parking = Parking.find(params[:id])
+  end
 end
