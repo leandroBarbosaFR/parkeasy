@@ -1,0 +1,30 @@
+#map {
+  position: sticky;
+  object-fit: cover;
+  top: 0;
+  height: 100vh;
+  width: 60%;
+}
+
+.marker {
+  width: 60px;
+  height: 22px;
+  background-color: teal;
+  border-radius: 4px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+  border-radius: 8px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.mapboxgl-popup-content h2 {
+  font-size: 18px;
+}
