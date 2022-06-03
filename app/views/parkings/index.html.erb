@@ -2,18 +2,20 @@
 <div class="container-content-index">
   <div class="container-parkings">
     <% @parkings.each do |parking| %>
-      <div>
         <div class="card-parking">
-          <%= image_tag(parking.photo) %>
+          <div class="card-parking-image">
+            <%= image_tag(parking.photo) %>
+          </div>
           <div class="card-parking-infos">
             <h2><%= parking.title %></h2>
-            <p><%= parking.price %> € par jour</p>
+            <div class="short-line"></div>
+            <h3><%= parking.description %></h3>
+            <p><strong><%= parking.price %>€</strong>/jour</p>
              <div class="button-container">
                     <%= link_to "Réserver!", "/parkings/#{parking.id}", class: "btn btn-primary align-text-bottom" %>
                   </div>
           </div>
         </div>
-      </div>
     <% end %>
   </div>
   <div id='map'
