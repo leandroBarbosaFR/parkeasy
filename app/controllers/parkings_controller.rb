@@ -1,6 +1,4 @@
 class ParkingsController < ApplicationController
-
-
   def index
     @parkings = Parking.all
     @address_parkings = AddressParking.all
