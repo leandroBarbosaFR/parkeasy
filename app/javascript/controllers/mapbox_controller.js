@@ -7,6 +7,7 @@ export default class extends Controller {
     markers: Array
   }
 
+
   connect() {
     console.log('Its work')
     mapboxgl.accessToken = this.apiKeyValue
