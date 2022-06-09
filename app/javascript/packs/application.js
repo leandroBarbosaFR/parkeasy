@@ -10,14 +10,15 @@ import "channels"
 
 
 Rails.start()
-Turbolinks.start()
 ActiveStorage.start()
+initFlatpickr();
+// laisser en commentaire ligne du dessous turbolinks pour que flatpickr fonctionne
+// Turbolinks.start()
 
 import { initFlatpickr } from "../plugins/flatpickr";
 
 import "controllers"
 import "bootstrap"
 
-initFlatpickr();
 
 // app/javascript/packs/application.js
