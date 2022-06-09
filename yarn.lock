@@ -6510,7 +6510,7 @@ statuses@2.0.1:
 
 stimulus-carousel@^4.0.0:
   version "4.0.0"
-  resolved "https://registry.npmjs.org/stimulus-carousel/-/stimulus-carousel-4.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/stimulus-carousel/-/stimulus-carousel-4.0.0.tgz#231d8dbcb5ecefc5a252ae34982fd565f999e681"
   integrity sha512-AW0jC5xJ6IJ6HWo9dxVLmv02xvaYvLR5TAM8EKtH0lrqDqarzlOEVgnBefKsIqP1KMuIv74TtWKwwaY7ikfweQ==
   dependencies:
     swiper "^7.4.1"

@@ -20,4 +20,6 @@ import "bootstrap"
 
 initFlatpickr();
 
+import 'swiper/css/bundle'
+
 // app/javascript/packs/application.js

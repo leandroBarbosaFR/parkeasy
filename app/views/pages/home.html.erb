@@ -19,18 +19,20 @@
   </div>
 </div>
 
-<div class="container-home-parkings">
-  <% @parkings.each do |parking| %>
-    <div class="home-card-parking">
-      <div class="home-card-parking-image">
-        <%= image_tag(parking.photo) %>
+<div data-controller="carousel" class="swiper-container">
+  <div class="swiper-wrapper">
+    <% @parkings.each do |parking| %>
+      <div class="swiper-slide home-card-parking">
+        <div class="home-card-parking-image">
+          <%= image_tag(parking.photo) %>
+        </div>
+        <div class="home-card-parking-infos">
+          <h5><%= parking.title %></h5>
+          <div class="short-line"></div>
+          <p><%= parking.address_parking.city %></p>
+          <p><strong><%= parking.price %>€</strong>/jour</p>
+        </div>
       </div>
-      <div class="home-card-parking-infos">
-        <h5><%= parking.title %></h5>
-        <div class="short-line"></div>
-        <p><%= parking.address_parking.city %></p>
-        <p><strong><%= parking.price %>€</strong>/jour</p>
-      </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
