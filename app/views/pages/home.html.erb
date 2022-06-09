@@ -19,10 +19,9 @@
   </div>
 </div>
 
-<div data-controller="carousel" class="swiper-container">
-  <div class="swiper-wrapper">
+<div class="container-home-parkings">
     <% @parkings.each do |parking| %>
-      <div class="swiper-slide home-card-parking">
+      <div class="home-card-parking">
         <div class="home-card-parking-image">
           <%= image_tag(parking.photo) %>
         </div>
@@ -34,5 +33,4 @@
         </div>
       </div>
     <% end %>
-  </div>
 </div>
