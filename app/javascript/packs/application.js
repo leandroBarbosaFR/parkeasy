@@ -17,14 +17,7 @@ import { initFlatpickr } from "../plugins/flatpickr";
 import "controllers"
 import "bootstrap"
 
-<<<<<<< HEAD
-initFlatpickr();
-
-import 'swiper/css/bundle'
-
-=======
 document.addEventListener('turbolinks:load', () => {
   initFlatpickr()
 });
->>>>>>> 5bced9347808cf87fea08cc4b64e75dd80d512de
 // app/javascript/packs/application.js
