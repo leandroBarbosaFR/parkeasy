@@ -1,0 +1,18 @@
+.button-booking-card {
+  background-color: #2963A6;
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 12px 16px;
+  position: absolute;
+  bottom: 18px;
+  right: 14px;
+  text-decoration: none;
+
+    &:hover  {
+      cursor: pointer;
+      color: #2963A6;
+      border: 1px solid #2963A6;
+      background-color: #ffffff;
+    }
+}
