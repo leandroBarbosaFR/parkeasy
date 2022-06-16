@@ -11,9 +11,9 @@
             <div class="short-line"></div>
             <h3><%= parking.description %></h3>
             <p><strong><%= parking.price %>€</strong>/jour</p>
-             <div class="button-container">
-                    <%= link_to "Réserver!", "/parkings/#{parking.id}", class: "btn btn-primary align-text-bottom" %>
-                  </div>
+            <div>
+              <%= link_to "Réserver", parkings_path(parking), class: 'button-booking-card' %>
+            </div>
           </div>
         </div>
     <% end %>
