@@ -1,6 +1,19 @@
-
 <div class="container-content-index">
   <div class="container-parkings">
+    <div class="container-search">
+      <%= simple_form_for :search, method: :get,
+                                  defaults: { required: false } do |f| %>
+        <%= f.input :search, label: "Recherche par adresse",
+                            input_html: { name: 'search',
+                                          value: params.dig(:search) } %>
+        <%= f.input :max_price, label: "Prix max",
+                          required: false,
+                          input_html: { type: :number,
+                                        name: :max_price,
+                                        value: params.dig(:max_price) } %>
+        <%= f.submit "Chercher" %>
+      <% end %>
+    </div>
     <% @parkings.each do |parking| %>
         <div class="card-parking">
           <div class="card-parking-image">
@@ -12,7 +25,7 @@
             <h3><%= parking.description %></h3>
             <p><strong><%= parking.price %>€</strong>/jour</p>
             <div>
-              <%= link_to "Réserver", parkings_path(parking), class: 'button-booking-card' %>
+              <%= link_to "Réserver", parking_path(parking), class: 'button-booking-card' %>
             </div>
           </div>
         </div>
