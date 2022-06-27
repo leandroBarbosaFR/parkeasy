@@ -12,9 +12,12 @@ display: flex;
 .container-home-parkings {
   width: 100%;
   height: auto;
-  background-color: #ffffff;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #f4f4f4;
   display: flex;
   justify-content: space-around;
   margin-bottom: 64px;
+}
+
+.container-search {
+  margin: 12px 8px 0px 8px;
 }

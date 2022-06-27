@@ -9,7 +9,8 @@
 
 .banner-home h1 {
   color: #ffffff;
-  font-family: $all-fonts;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
 }
 
 .banner-home-content {
@@ -20,4 +21,28 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+
+a {
+  font-family: $poppins;
+}
+
+h1 {
+    font-family: $poppins;
+}
+
+
+h2 {
+  font-family: $poppins;
+}
+
+p {
+  font-family: $poppins;
+
+}
+
+
+h5 {
+  font-family: $poppins;
 }

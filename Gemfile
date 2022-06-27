@@ -36,14 +36,18 @@ gem 'cloudinary', '~> 1.16.0'
 # Gemfile geocoder
 gem "geocoder"
 
+# Gemfile Devise
 gem 'devise'
+
+# Gemfile PgSearch
+gem 'pg_search'
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form', github: 'heartcombo/simple_form'
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
-  gem 'dotenv-rails'
+
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

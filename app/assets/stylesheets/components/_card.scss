@@ -4,16 +4,14 @@
   display: flex;
   align-items: center;
   border-radius: 8px;
+  position: relative;
 }
 
 .card-parking:hover {
   background-color: rgba(220,220,220,0.3);
   cursor: pointer;
 }
-// .card-parking-image {
-//   width: 480px;
-//   height: 280px;
-// }
+
 .card-parking img {
   width: 480px;
   height: 280px;
@@ -28,7 +26,7 @@
 .card-parking-infos h2 {
   font-size: 24px;
   font-weight: 600;
-  font-family: $all-fonts;
+  font-family: $poppins;
 }
 
 .card-image {
@@ -51,16 +49,17 @@
 }
 
 .home-card-parking {
-  width: 420px;
   margin: 12px 8px;
   background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
 }
 
 .home-card-parking img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: 8px;
 }
 
 .home-card-parking-infos {
