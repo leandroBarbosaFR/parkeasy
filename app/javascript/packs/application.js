@@ -21,3 +21,7 @@ document.addEventListener('turbolinks:load', () => {
   initFlatpickr()
 });
 // app/javascript/packs/application.js
+// Support component names relative to this directory:
+var componentRequireContext = require.context("components", true);
+var ReactRailsUJS = require("react_ujs");
+ReactRailsUJS.useContext(componentRequireContext);
