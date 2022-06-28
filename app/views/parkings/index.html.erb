@@ -18,13 +18,13 @@
         <div class="card-parking">
           <div class="card-parking-image">
             <%= image_tag(parking.photo) %>
-          </div>
-          <div class="card-parking-infos">
+            <div class="card-parking-infos">
             <h2><%= parking.title %></h2>
             <div class="short-line"></div>
             <h3><%= parking.description %></h3>
             <p><strong><%= parking.price %>€</strong>/jour</p>
             <div>
+          </div>
               <%= link_to "Réserver", parking_path(parking), class: 'button-booking-card' %>
             </div>
           </div>
