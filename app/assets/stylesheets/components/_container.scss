@@ -9,6 +9,14 @@ display: flex;
   border-radius: 16px;
   margin: 8px;
 }
+
+@media (max-width: 767.98px) {
+  .container-parkings {
+    width: 100%;
+  }
+
+ }
+
 .container-home-parkings {
   width: 100%;
   height: auto;
