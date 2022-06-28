@@ -20,4 +20,3 @@ import "bootstrap"
 document.addEventListener('turbolinks:load', () => {
   initFlatpickr()
 });
-// app/javascript/packs/application.js

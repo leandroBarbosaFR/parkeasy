@@ -36,7 +36,11 @@ gem 'cloudinary', '~> 1.16.0'
 # Gemfile geocoder
 gem "geocoder"
 
+# Gemfile Devise
 gem 'devise'
+
+# Gemfile PgSearch
+gem 'pg_search'
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.6.1'
