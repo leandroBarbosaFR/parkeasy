@@ -1,4 +1,4 @@
-<div class="card-image">
+<div class="card-image text-center">
   <%= image_tag @parking.photo, crop: :fill, class: "img-fluid rounded-start" %>
 </div>
 
@@ -9,8 +9,8 @@
     <p class="card-text"><small class="text-muted"><%= @parking.description.capitalize %></small></p>
   </div>
 </div>
-<div class="container">
-  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+<div class="container text-center">
+  <div class="form-wrapper">
     <h2>Réservez votre place</h2>
 
     <%= simple_form_for :search, method: "get" do |f| %>
