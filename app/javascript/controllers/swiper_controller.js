@@ -1,8 +1,17 @@
 import { Controller } from "@hotwired/stimulus"
 import Swiper, { Autoplay, Pagination, Navigation} from 'swiper';
-import 'swiper/swiper.min.css';
-import "swiper/modules/pagination/pagination.min.css";
-import "swiper/modules/navigation/navigation.min.css";
+// import 'swiper/swiper.min.css';
+// import "swiper/modules/pagination/pagination.min.css";
+// import "swiper/modules/navigation/navigation.min.css";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+
+const swiper = new Swiper('.swiper', {
+  modules: [Autoplay, Pagination, Navigation],
+
+});
 
 
 Swiper.use([Autoplay, Pagination, Navigation]);
