@@ -8,11 +8,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 
-const swiper = new Swiper('.swiper', {
-  modules: [Autoplay, Pagination, Navigation],
-
-});
-
 
 Swiper.use([Autoplay, Pagination, Navigation]);
 
