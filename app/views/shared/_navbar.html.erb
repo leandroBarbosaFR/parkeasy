@@ -3,6 +3,13 @@
     <%= link_to "/", class: "navbar-brand" do %>
       <%= image_tag "https://res.cloudinary.com/leandrobarbosalemos/image/upload/v1654670631/parkeasyLogo.png" %>
     <% end %>
+  <div class="links-navbar-desktop d-none d-lg-block ">
+    <ul class="navbar-links h-100">
+      <li class="search-parking h-100">Trouvez un parking</li>
+      <li class="rent-parking h-100">Louer votre parking</li>
+      <li class="faq h-100">FAQ</li>
+    </ul>
+    </div>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -22,8 +29,8 @@
             </div>
           </li>
         <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <li class="nav-item-btn">
+            <%= link_to "Se connecter", new_user_session_path, class: "nav-link-item" %>
           </li>
         <% end %>
       </ul>
