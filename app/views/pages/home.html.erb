@@ -2,14 +2,14 @@
   <div class="banner-home-content">
     <h1>Location de parking entre particuliers</h1>
     <div class="button-container">
-      <%= link_to "Nos parkings disponibles!", parkings_path, class: "btn btn-primary align-text-bottom" %>
+      <%= link_to "Nos parkings disponibles!", parkings_path, class:" btn-homepage btn btn-primary align-text-bottom" %>
      <%# <input type="file" accept="image/*"/> %>
     </div>
 </div>
 <div class="container-maps-cities d-none d-sm-block">
   <div class="container-maps-cities-content">
     <h2>Retrouvez nos parkings partout en France !</h2>
-    <div class="search-bar">
+    <div class="search-bar" type="input">
     Renseigner une ville
     </div>
   </div>
@@ -17,47 +17,4 @@
     data-controller="mapbox-home"
     data-mapbox-home-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
-</div>
-
-<!-- Slider main container -->
-<div class="swiper d-none d-sm-block"
-     data-controller="swiper"
-     data-swiper-target="container">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <% @parkings.each do |parking| %>
-      <div class="swiper-slide">
-        <div class="home-card-parking">
-          <div class="home-card-parking-image">
-            <%= image_tag(parking.photo) %>
-          </div>
-          <div class="home-card-parking-infos">
-            <h5><%= parking.title %></h5>
-            <div class="short-line"></div>
-            <p><%= parking.address_parking.city %></p>
-            <p><strong><%= parking.price %>€</strong>/jour</p>
-          </div>
-          <%= link_to 'Réserver', parkings_path(parking), class:'button-booking-card' %>
-        </div>
-      </div>
-    <% end %>
-  </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"
-      data-swiper-target="pagination">
-  </div>
-
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"
-       data-swiper-target="prev">
-       <i class="fas fa-angle-left"></i>
-  </div>
-  <div class="swiper-button-next"
-       data-swiper-target="next">
-       <i class="fas fa-angle-right"></i>
-  </div>
-
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
 </div>

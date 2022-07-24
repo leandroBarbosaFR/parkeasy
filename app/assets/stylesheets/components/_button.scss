@@ -1,8 +1,8 @@
 .button-booking-card {
-  background-color: #2963A6;
+  background-color: #19314a;
   color: #ffffff;
   font-weight: 500;
-  border-radius: 4px;
+  border-radius: 16px;
   padding: 12px 16px;
   position: absolute;
   bottom: 18px;
@@ -12,7 +12,26 @@
     &:hover  {
       cursor: pointer;
       color: #2963A6;
-      border: 1px solid #2963A6;
+      border: 1px solid #19314a;
       background-color: #ffffff;
+    }
+}
+
+.btn-homepage {
+  border-radius: 16px;
+}
+
+.nav-item-btn .nav-link-item {
+  background-color: #19314a;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 3px 8px;
+  text-decoration: none;
+  font-weight: var(--bs-body-font-weight);
+
+    &:hover  {
+      cursor: pointer;
+      color: #ffffff;
+      background-color: #2963A6;
     }
 }

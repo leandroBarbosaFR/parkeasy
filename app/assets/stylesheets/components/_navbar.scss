@@ -17,3 +17,31 @@
 }
 
 
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  flex-direction: row;
+  padding-inline-start: 40px;
+  justify-content: end;
+  margin-left: 500px;
+
+}
+
+.search-parking {
+padding: 0 15px;
+
+  &:active {
+    border-bottom: 1px solid var($blue-navy);
+  }
+}
+
+.rent-parking{
+padding: 0 15px;
+}
+
+.faq {
+  padding: 0 15px;
+}
+
