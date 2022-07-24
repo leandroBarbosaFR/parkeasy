@@ -11,7 +11,7 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 
 #ember
-# gem 'ember-rails'
+gem 'ember-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
