@@ -17,7 +17,7 @@
     <% @parkings.each do |parking| %>
         <div class="card-parking">
           <div class="card-parking-image">
-            <%= image_tag(parking.photo) %>
+            <%= image_tag(parking.photos[0]) %>
             <div class="card-parking-infos">
               <h2><%= parking.title %></h2>
               <div class="short-line"></div>

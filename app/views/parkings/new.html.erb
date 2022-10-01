@@ -1,0 +1,12 @@
+ <%= simple_form_for [ @parking ] do |f| %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :price %>
+      <%= f.input :available %>
+      <%= f.input :address %>
+      <%= f.input :post_code %>
+      <%= f.input :city %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true} %>
+
+      <%= f.submit "Add parking", class: "btn btn-primary" %>
+      <% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_02_130736) do
+ActiveRecord::Schema.define(version: 2022_10_01_122844) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,18 +43,6 @@ ActiveRecord::Schema.define(version: 2022_06_02_130736) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "address_parkings", force: :cascade do |t|
-    t.string "address"
-    t.string "post_code"
-    t.string "city"
-    t.bigint "parking_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.float "latitude"
-    t.float "longitude"
-    t.index ["parking_id"], name: "index_address_parkings_on_parking_id"
-  end
-
   create_table "bookings", force: :cascade do |t|
     t.date "start_at"
     t.date "end_at"
@@ -76,6 +64,9 @@ ActiveRecord::Schema.define(version: 2022_06_02_130736) do
     t.datetime "updated_at", precision: 6, null: false
     t.float "latitude"
     t.float "longitude"
+    t.string "address"
+    t.string "city"
+    t.string "post_code"
     t.index ["user_id"], name: "index_parkings_on_user_id"
   end
 
@@ -107,7 +98,6 @@ ActiveRecord::Schema.define(version: 2022_06_02_130736) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "address_parkings", "parkings"
   add_foreign_key "bookings", "parkings"
   add_foreign_key "bookings", "users"
   add_foreign_key "parkings", "users"
