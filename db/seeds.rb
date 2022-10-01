@@ -60,7 +60,7 @@ photos_parking_1 = [img_parking_1]
 
 #   photos_parking_5.each do |photo|
 #     parking_5.photos.attach(io: photo, filename: "placeParking_van.jpg", content_type: 'image/jpg')
-#   end
+#   end 
 
 # #seed rating
 # parking_1.ratings << Review.create(rating: 5, review: "Emplacement ideal pour une journée de shopping.")
