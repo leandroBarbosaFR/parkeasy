@@ -303,7 +303,6 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver (>= 4.0.0.rc1)
   simple_form!
-  spring
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
@@ -315,3 +314,4 @@ RUBY VERSION
 
 BUNDLED WITH
    2.3.19
+
