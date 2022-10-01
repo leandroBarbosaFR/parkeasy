@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require "open-uri"
-AddressParking.destroy_all
 Parking.destroy_all
 User.destroy_all
+
 # Review.destroy_all
 
 #seed user
@@ -25,26 +25,42 @@ img_parking_3 = URI.open("https://res.cloudinary.com/leandrobarbosalemos/image/u
 img_parking_4 = URI.open("https://res.cloudinary.com/leandrobarbosalemos/image/upload/v1653924337/placeParking_chargeur.jpg")
 img_parking_5 = URI.open("https://res.cloudinary.com/leandrobarbosalemos/image/upload/v1653924305/placeParking_van.jpg")
 
+
+
 #seed parking
-parking_1 = Parking.create!(title: "Parking La Rotonde", description: "Place de parking très bien situé dans le centre ville d'aix en provence.", price: 8, available: "true", user: user_1)
-parking_1.photo.attach(io: img_parking_1, filename: 'placeParking_box.jpg', content_type: 'image/jpg')
-address_parking_1 = AddressParking.create(address: '2 rue Lapierre', post_code:'13100', city: 'Aix-en-Provence', parking: parking_1)
+parking_1 = Parking.create!(title: "Parking La Rotonde", address: '2 rue Lapierre', post_code: '13100', city: 'Aix-en-Provence', description: "Place de parking très bien situé dans le centre ville d'aix en provence.", price: 8, available: "true", user: user_1)
+photos_parking_1 = [img_parking_1]
 
-parking_2 = Parking.create!(title: "Parking Rue d'Italie", description: "A louer une place de parking extérieure dans la résidence sécurisée l'italien.", price: 9, available: "true", user: user_2)
-parking_2.photo.attach(io: img_parking_2, filename: 'placeParking_ext.jpg', content_type: 'image/jpg')
-address_parking_2 = AddressParking.create(address: "24 rue d'Italie", post_code: '13100', city: 'Aix-en-Provence', parking: parking_2)
+  photos_parking_1.each_with_index do |photo,index|
+    parking_1.photos.attach(io: photo, filename: "#{index}.jpg", content_type: 'image/jpg')
+  end
 
-parking_3 = Parking.create!(title: "Parking Cours Sextius", description: "Location d'une place de parking avec chargeur pour voiture electrique.", price: 11, available: "true", user: user_3)
-parking_3.photo.attach(io: img_parking_3, filename: 'placeParking_voitureElec.jpg', content_type: 'image/jpg')
-address_parking_3 = AddressParking.create(address: '44 cours Sextius', post_code: '13100', city: 'Aix-en-Provence', parking: parking_3)
+# parking_2 = Parking.create!(title: "Parking Rue d'Italie", address: "24 rue d'Italie", post_code: '13100', city: 'Aix-en-Provence', description: "A louer une place de parking extérieure dans la résidence sécurisée l'italien.", price: 9, available: "true", user: user_2)
+# photos_parking_2 = [img_parking_2]
 
-parking_4 = Parking.create!(title: "Parking Le Cezanne", description: "Location d'une place de parking souterrain avec possibilité de charger votre voiture electrique.", price: 12, available: "true", user: user_4)
-parking_4.photo.attach(io: img_parking_4, filename: 'placeParking_chargeur.jpg', content_type: 'image/jpg')
-address_parking_4 = AddressParking.create(address: '12 rue Cardinale', post_code: '13100', city: 'Aix-en-Provence', parking: parking_4)
+#   photos_parking_2.each do |photo|
+#     parking_2.photos.attach(io: photo, filename: "placeParking_ext.jpg", content_type: 'image/jpg')
+#   end
 
-parking_5 = Parking.create!(title: "Parking Du Roi René", description: "Place parking pour van.", price: 13, available: "true", user: user_5)
-parking_5.photo.attach(io: img_parking_5, filename: 'placeParking_van.jpg', content_type: 'image/jpg')
-address_parking_5 = AddressParking.create(address: '64 boulevard du Roi René', post_code: '13100', city: 'Aix-en-Provence', parking: parking_5)
+# parking_3 = Parking.create!(title: "Parking Cours Sextius", address: '44 cours Sextius', post_code: '13100', city: 'Aix-en-Provence', description: "Location d'une place de parking avec chargeur pour voiture electrique.", price: 11, available: "true", user: user_3)
+# photos_parking_3 = [img_parking_3]
+
+#   photos_parking_3.each do |photo|
+#     parking_3.photos.attach(io: photo, filename: "placeParking_voitureElec.jpg", content_type: 'image/jpg')
+#   end
+
+# parking_4 = Parking.create!(title: "Parking Le Cezanne", address: '12 rue Cardinale', post_code: '13100', city: 'Aix-en-Provence', description: "Location d'une place de parking souterrain avec possibilité de charger votre voiture electrique.", price: 12, available: "true", user: user_4)
+# photos_parking_4 = [img_parking_4]
+
+#   photos_parking_4.each do |photo|
+#     parking_4.photos.attach(io: photo, filename: "placeParking_chargeur.jpg", content_type: 'image/jpg')
+#   end
+# parking_5 = Parking.create!(title: "Parking Du Roi René", address: '64 boulevard du Roi René', post_code: '13100', city: 'Aix-en-Provence', description: "Place parking pour van.", price: 13, available: "true", user: user_5)
+# photos_parking_5 = [img_parking_5]
+
+#   photos_parking_5.each do |photo|
+#     parking_5.photos.attach(io: photo, filename: "placeParking_van.jpg", content_type: 'image/jpg')
+#   end
 
 # #seed rating
 # parking_1.ratings << Review.create(rating: 5, review: "Emplacement ideal pour une journée de shopping.")
