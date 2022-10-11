@@ -22,16 +22,17 @@
 }
 
 .nav-item-btn .nav-link-item {
-  background-color: #19314a;
-  color: #ffffff;
+  // background-color: #2a63a6;
+  color: #151414;
   border-radius: 16px;
   padding: 3px 8px;
   text-decoration: none;
   font-weight: var(--bs-body-font-weight);
 
-    &:hover  {
-      cursor: pointer;
-      color: #ffffff;
-      background-color: #2963A6;
+    // &:hover  {
+    //   cursor: pointer;
+    //   color: #ffffff;
+    //   background-color: #2963A6;
+    // }
+
     }
-}
