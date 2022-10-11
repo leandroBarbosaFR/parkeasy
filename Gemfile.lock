@@ -142,6 +142,8 @@ GEM
     msgpack (1.5.3)
     netrc (0.11.0)
     nio4r (2.5.8)
+    nokogiri (1.13.7-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.13.7-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.13.7-x86_64-linux)
@@ -228,7 +230,6 @@ GEM
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
     semantic_range (3.0.0)
-    spring (4.0.0)
     sprockets (4.1.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -271,6 +272,7 @@ GEM
     zeitwerk (2.6.0)
 
 PLATFORMS
+  arm64-darwin-21
   x86_64-darwin-21
   x86_64-linux
 
@@ -307,4 +309,4 @@ RUBY VERSION
    ruby 3.0.3p157
 
 BUNDLED WITH
-   2.3.15
+   2.3.19
